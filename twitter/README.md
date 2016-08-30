@@ -1,2 +1,0 @@
-# twitter
-A practice twitter
