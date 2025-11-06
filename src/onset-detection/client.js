@@ -11,14 +11,16 @@ async function run() {
     const canvasCtx = setupCanvas("canvas-1");
 
     const audioCtx = new AudioContext();
-    const response = await fetch("samples_guitar-acoustic_A2.mp3"); // 368392_electrodynamix.mp3
+    // const response = await fetch("368392_electrodynamix.mp3");
+    const response = await fetch("samples_guitar-acoustic_A2.mp3");
     const buffer = await audioCtx.decodeAudioData(await response.arrayBuffer());
 
     const dataArray = buffer.getChannelData(0);
     let sampleRate = buffer.sampleRate;
 
     let start = sampleRate * 0;
-    let bufferLength = sampleRate * 1.2; // seconds
+    let bufferLength = sampleRate * 1.2;
+    // let bufferLength = sampleRate * 7.2; //electrodynamix
     let end = start + bufferLength;
 
     let view1 = dataArray.subarray(start, end);
@@ -32,11 +34,10 @@ async function run() {
         function bufferFromData(data) {
             const numberOfChannels = 1;
             const sampleRate = audioCtx.sampleRate;
-            const lengthInSamples = sampleRate * 4
 
             const audioBuffer = audioCtx.createBuffer(
                 numberOfChannels,
-                lengthInSamples,
+                data.length,
                 sampleRate
             );
             audioBuffer.copyToChannel(data, 0)
