@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "domstack --watch",
+    "build": "domstack"
+  },
+  "dependencies": {
+    "@domstack/static": "^11.0.0-beta.0",
+    "highlight.js": "^11.9.0",
+    "mine.css": "^10.0.0"
+  }
+}
