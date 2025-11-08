@@ -5,7 +5,9 @@
   },
   "dependencies": {
     "@domstack/static": "^11.0.0-beta.0",
+    "fft.js": "^4.0.4",
     "highlight.js": "^11.9.0",
-    "mine.css": "^10.0.0"
+    "mine.css": "^10.0.0",
+    "uhtml-isomorphic": "^2.1.0"
   }
 }
