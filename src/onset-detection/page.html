@@ -4,46 +4,46 @@ Please click on the page so the audio examples can load.
 <h2>Motivation</h2>
 
 <p>
-    If you want to learn about onset detection or beat tracking, you will find
-    lots of papers, but little code. Then you will start finding references to a
-    blog series by Bad Logic games. The website is gone but you can find the
-    articles in the wayback machine. Most of the saves are missing the images.
-    Here are the best saves of the two most important articles I've found:
-    <a
-        href="https://web.archive.org/web/20190105061816/http://www.badlogicgames.com/wordpress/?p=161"
-        >Onset Detection Part 6: Onsets &amp; Spectral Flux</a
-    >
-    and
-    <a
-        href="https://web.archive.org/web/20201128072621/http://www.badlogicgames.com/wordpress/?p=187"
-        >Onset Detection Part 7: Thresholding &amp; Peak picking</a
-    >
+  If you want to learn about onset detection or beat tracking, you will find
+  lots of papers, but little code. Then you will start finding references to a
+  blog series by Bad Logic games. The website is gone but you can find the
+  articles in the wayback machine. Most of the saves are missing the images.
+  Here are the best saves of the two most important articles I've found:
+  <a
+    href="https://web.archive.org/web/20190105061816/http://www.badlogicgames.com/wordpress/?p=161"
+    >Onset Detection Part 6: Onsets &amp; Spectral Flux</a
+  >
+  and
+  <a
+    href="https://web.archive.org/web/20201128072621/http://www.badlogicgames.com/wordpress/?p=187"
+    >Onset Detection Part 7: Thresholding &amp; Peak picking</a
+  >
 </p>
 
 <p>
-    The articles use Python. It's probably python2 since it was written in 2010.
-    That's fine. Now Web Audio exists. It would be fun to do it in the browser.
+  The articles use Python. It's probably python2 since it was written in 2010.
+  That's fine. Now Web Audio exists. It would be fun to do it in the browser.
 </p>
 
 <p>
-    Anyways I need onset detection and beat tracking for other things I'm
-    working on. Might as well write it down and save this information for future
-    generations.
+  Anyways I need onset detection and beat tracking for other things I'm working
+  on. Might as well write it down and save this information for future
+  generations.
 </p>
 
 <h2>What is an onset?</h2>
 <div>
-    <canvas id="canvas-1" />
+  <canvas id="canvas-1" ></canvas>
 </div>
 <input type="button" id="play-1" value="play" />
 <p>
-    An onset is the beginning of a note. Above is a recoding of a single guitar
-    note. The onset is the tall part on the left. It's actually kind of hard for
-    the computer to find onsets in music. They have
-    <a href="https://www.music-ir.org/mirex/wiki/2025:Audio_Beat_Tracking"
-        >contests</a
-    >
-    about it.
+  An onset is the beginning of a note. Above is a recoding of a single guitar
+  note. The onset is the tall part on the left. It's actually kind of hard for
+  the computer to find onsets in music. They have
+  <a href="https://www.music-ir.org/mirex/wiki/2025:Audio_Beat_Tracking"
+    >contests</a
+  >
+  about it.
 </p>
 
 <h2>Lets look at the Fourier Transform of the audio</h2>
@@ -51,12 +51,12 @@ Actually lets look at a sample with more onsets in it first. This is some wub
 wub I heard in a game my kids playing.
 
 <div>
-    <canvas id="canvas-2" />
-    <input type="button" id="play-2" value="play" />
+  <canvas id="canvas-2" ></canvas>
+  <input type="button" id="play-2" value="play" />
 </div>
 
 <div>
-    <canvas id="canvas-3" />
+  <canvas id="canvas-3" ></canvas>
 </div>
 <p>You can kind of see the beats in there.</p>
 <p>Y axis is frequency; Color is magnitude.</p>
